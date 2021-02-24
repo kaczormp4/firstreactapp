@@ -1,7 +1,13 @@
+main {
+  display: flex;
+  height: 100%;
+}
 .main-content {
-  width: 80%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: scroll;
 }
 .content-boxes {
   width: max-content;
