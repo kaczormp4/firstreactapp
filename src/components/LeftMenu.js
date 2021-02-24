@@ -29,8 +29,8 @@ function LeftMenu() {
                 </li>
                 <li className='nav-item'>
                     <Link to='/saved' className='nav-links' onClick={closeMobileMenu}>
-                        <i className="fas fa-bookmark" />
-                            SAVED
+                        <i className="fas fa-envelope" />
+                            MESSAGES
                         </Link>
                 </li>
                 <li className='nav-item'>
