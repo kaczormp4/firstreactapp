@@ -45,6 +45,11 @@ main {
   padding: 10px;
   font-size: 2em;
   margin-top: 10px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+.friendbox:hover {
+  box-shadow: 0px 0px 5px rgb(65, 147, 255);
 }
 .friendbox > i {
   margin-right: 10px;
