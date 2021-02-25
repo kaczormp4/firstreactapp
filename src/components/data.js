@@ -51,6 +51,13 @@ const data = {
             surname:"White",
             sex: "male",
         },
+        {
+            id:5,
+            age:36,
+            name:"Anna",
+            surname:"Red",
+            sex: "female",
+        },
     ],
     groups:[
         {
