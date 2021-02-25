@@ -24,7 +24,8 @@
 }
 
 .nav-item > a > i {
-  width: 20px;
+  width: 30px;
   margin-right: 10px;
   text-align: center;
+  font-size: 1.3em;
 }

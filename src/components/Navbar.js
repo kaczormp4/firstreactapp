@@ -1,11 +1,25 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
+import './LeftMenu.css';
 
 function Navbar() {
-    const [click, setClick] = useState(false);
 
-    const handleClick = () => setClick(!click);
+    const [click, setClick] = useState(false);
+    const handleClick = () =>{
+        setClick(!click);
+        let textMenu = document.querySelectorAll(".nav-links span");
+            for(let i=0; i<textMenu.length;i++){
+                if(textMenu[i].style.display==="none"){
+                    console.log("ss")
+                    textMenu[i].style.display=""
+                }else{
+                    textMenu[i].style.display="none"
+                }
+            }
+        
+    } 
+
     return (
         <>
             <nav className="navbar">

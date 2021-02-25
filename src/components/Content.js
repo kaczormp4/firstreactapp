@@ -2,80 +2,50 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import './Content.css';
 import LeftMenu from './LeftMenu';
+import data from './data.js';
 
+const LastMessages=({message})=>(
+    <div className='last-messages-box '>
+    <i className='far fa-user' />
+    <span>{message.senderName} {message.senderSurname}</span>
+    <h7>{message.date}</h7>
+    <div className='last-messages-text'>
+    {message.contents}
+    </div>
+   </div>
+)
+const FriendsAvailable=({user}) =>(
+    <div className='friendbox'>
+    <i className='far fa-user' />
+    {user.name} {user.surname}
+   </div>
+)
+const MyGroups=({group}) =>(
+    <div className='mygropus-box'>
+    <i className="fas fa-users" />
+    {group.groupName}
+    <p>{group.usersOnline} ONLINE</p>
+    </div>
+)
 function Content() {
+    const usersFriends = data.users.map(user=> <FriendsAvailable key={user.id} user={user}/>)
+    const myGroups = data.groups.map(group=> <MyGroups key={group.id} group={group}/>)
+    const lastMessages = data.messages.map(message=> <LastMessages key={message.id} message={message}/>)
     return (
         <main>
             <LeftMenu/>
            <div className='main-content'>
                <div className='content-boxes'>
                    <h1>LAST MESSAGES</h1>
-                   <div className='last-messages-box '>
-                    <i className='far fa-user' />
-                    <span>Adam White</span>
-                    <h7>24.02.2020 17:30</h7>
-                    <div className='last-messages-text'>
-                        Hey, how are you?,<br/>
-                        Are you still avaible?
-                    </div>
-                   </div>
-                   <div className='last-messages-box '>
-                    <i className='far fa-user' />
-                    <span>Jan Black</span>
-                    <h7>23.02.2020 17:30</h7>
-                    <div className='last-messages-text'>
-                        See you soon :D
-                    </div>
-                   </div>
-                   <div className='last-messages-box '>
-                    <i className='far fa-user' />
-                    <span>John Bolt</span>
-                    <h7>22.02.2020 5:30</h7>
-                    <div className='last-messages-text'>
-                        I'll meet you tonight
-                    </div>
-                   </div>
+                    {lastMessages}
                </div>
                <div className='content-boxes'>
                    <h1>FRIENDS AVAILABLE</h1>
-                   <div className='friendbox'>
-                    <i className='far fa-user' />
-                    Adam Adam
-                   </div>
-                   <div className='friendbox'>
-                    <i className='far fa-user' />
-                    Jan Adam
-                   </div>
-                   <div className='friendbox'>
-                   <i className='far fa-user' />
-                    Adam White
-                   </div>
-                   <div className='friendbox'>
-                   <i className='far fa-user' />
-                    Jan Black
-                   </div>
-                   <div className='friendbox'>
-                   <i className='far fa-user' />
-                    John Bolt
-                   </div>
+                    {usersFriends}
                </div>
                <div className='content-boxes'>
                 <h1>MY GROUPS</h1>
-                <div className='mygropus-box'>
-                    <i className="fas fa-users" />
-                    CAR LOVERS
-                    <p>21 ONLINE</p>
-                </div>
-                <div className='mygropus-box'>
-                    <i className="fas fa-users" />
-                    FLOWERS
-                    <p>1 ONLINE</p>
-                </div>
-                <div className='mygropus-box'>
-                    <i className="fas fa-users" />
-                    programmers
-                    <p>21 ONLINE</p>
-                </div>
+                {myGroups}
                </div>
                <div className='content-boxes'>
                 <a href="https://github.com/kaczormp4">
