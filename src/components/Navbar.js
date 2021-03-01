@@ -19,8 +19,9 @@ function Navbar() {
                     }
                 }
         }
-        else{
+        else{        
             let textMenu = document.getElementById("left-nav");
+            console.log(textMenu)
                 if(textMenu.style.display==="none"){
                     textMenu.style.display=""
                 }else{
@@ -34,7 +35,7 @@ function Navbar() {
             <nav className="navbar">
                 <div className='navbar-container'>
                     <div className='menu-icon' onClick={handleClick}>
-                        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+                        <i className={click ? 'fas fa-bars' : 'fas fa-times'} />
                     </div>
                     <Link to="/" className="navbar-logo">
                         <span>USERNAME</span>
