@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './LeftMenu.css';
+import './LeftMenuMobile.css';
 
 function LeftMenu() {
     const [click, setClick] = useState(false);
     const closeMobileMenu = () => setClick(false);
 
     return (
-        <div className='left-nav'>
+        <div className='left-nav' id="left-nav">
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <li className='nav-item'>
                     <Link to='/' className='nav-links' onClick={closeMobileMenu}>

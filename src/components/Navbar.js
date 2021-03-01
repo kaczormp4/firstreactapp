@@ -8,16 +8,25 @@ function Navbar() {
     const [click, setClick] = useState(false);
     const handleClick = () =>{
         setClick(!click);
-        let textMenu = document.querySelectorAll(".nav-links span");
-            for(let i=0; i<textMenu.length;i++){
-                if(textMenu[i].style.display==="none"){
-                    console.log("ss")
-                    textMenu[i].style.display=""
-                }else{
-                    textMenu[i].style.display="none"
+        const windowOuterWidth  = window.outerWidth;
+        if(windowOuterWidth>799){
+            let textMenu = document.querySelectorAll(".nav-links span");
+                for(let i=0; i<textMenu.length;i++){
+                    if(textMenu[i].style.display==="none"){
+                        textMenu[i].style.display=""
+                    }else{
+                        textMenu[i].style.display="none"
+                    }
                 }
-            }
-        
+        }
+        else{
+            let textMenu = document.getElementById("left-nav");
+                if(textMenu.style.display==="none"){
+                    textMenu.style.display=""
+                }else{
+                    textMenu.style.display="none"
+                }         
+        }
     } 
 
     return (

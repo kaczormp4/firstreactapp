@@ -1,0 +1,14 @@
+@media only screen and (max-width: 799px) {
+  .left-nav {
+    --display: none;
+  }
+  .nav-links span {
+  }
+  .nav-item {
+  }
+  .nav-item:hover {
+  }
+
+  .nav-item > a > i {
+  }
+}
