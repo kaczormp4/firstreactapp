@@ -11,5 +11,10 @@
   }
 
   .nav-item > a > i {
+    width: 50px;
+    font-size: 2em;
+  }
+  .nav-item > a > span {
+    font-size: 2em;
   }
 }

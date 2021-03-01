@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Content.css';
+import './ContentMobile.css';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import LeftMenu from './LeftMenu';
 import Home from '../pages/Home';

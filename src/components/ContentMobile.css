@@ -1,0 +1,11 @@
+@media only screen and (max-width: 799px) {
+  .content-boxes {
+    padding-bottom: 25px;
+  }
+  .github-box {
+    margin-bottom: 20px;
+  }
+  .github-box > span {
+    font-size: 30px;
+  }
+}

@@ -19,7 +19,7 @@ function LeftMenu() {
                 <li className='nav-item'>
                     <Link to='/friends' className='nav-links' onClick={closeMobileMenu}>
                         <i className="fas fa-user-friends" />
-                        <span> FRIENDS</span>
+                        <span>FRIENDS</span>
                         </Link>
                 </li>
                 <li className='nav-item'>
@@ -31,7 +31,7 @@ function LeftMenu() {
                 <li className='nav-item'>
                     <Link to='/messages' className='nav-links' onClick={closeMobileMenu}>
                         <i className="fas fa-envelope" />
-                        <span> MESSAGES</span>
+                        <span>MESSAGES</span>
                         </Link>
                 </li>
                 <li className='nav-item'>
