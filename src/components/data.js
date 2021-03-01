@@ -4,7 +4,7 @@ const data = {
             id:1,
             senderName:'Adam',
             senderSurname:'White',
-            date:'24.02.2020 17:30',
+            date:'24.02.2020 17:31',
             contents:'Hey, how are you?,Are you still avaible?',
         },
         {
