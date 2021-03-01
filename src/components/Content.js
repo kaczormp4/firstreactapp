@@ -18,6 +18,7 @@ function Content() {
         <main>
              <LeftMenu/>
              <Route exact path="/" component={Home}/>
+             <Route exact path="/firstreactapp" component={Home}/>
              <Route exact path="/friends" component={Friends}/>
              <Route exact path="/groups" component={Groups}/>
              <Route exact path="/messages" component={Messages}/>
